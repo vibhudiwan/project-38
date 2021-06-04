@@ -205,15 +205,14 @@ if(addFood.mousePressed(function(){
   
 
 
-  if (lastFed>=12){
-    text("LAST FED :" + lastFed + "th Hour",20,50);
-  }
-  else if (lastFed===0){
-    text("LAST FED : 12AM ",20,50);
-  } 
-  else{
-    text("LAST FED :" + feedTime + "th Hour",20,50);
-  }
+  if(lastFed>=12){
+    text("Last Feed : "+ lastFed%12 + " PM", 20,50);
+   }else if(lastFed==0){
+     text("Last Feed : 12 AM",20,50);
+   }else{
+     text("Last Feed : "+ lastFed + " AM",20,50);
+   }
+
 
   if(foodS<=0){
     foodS=0;
